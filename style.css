@@ -13,6 +13,30 @@ body {
 
 .calculator {
     height: 100%;
-    aspect-ratio: 2/3;
+    aspect-ratio: 1;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1% 1%;
 }
+      
+.display { grid-area: 2 / 2 / 4 / 7; }
+.button-7 { grid-area: 5 / 2 / 6 / 3; }
+.button-8 { grid-area: 5 / 3 / 6 / 4; }
+.button-9 { grid-area: 5 / 4 / 6 / 5; }
+.button-plus { grid-area: 5 / 5 / 6 / 6; }
+.button-4 { grid-area: 6 / 2 / 7 / 3; }
+.button-5 { grid-area: 6 / 3 / 7 / 4; }
+.button-6 { grid-area: 6 / 4 / 7 / 5; }
+.button-minus { grid-area: 6 / 5 / 7 / 6; }
+.button-1 { grid-area: 7 / 2 / 8 / 3; }
+.button-2 { grid-area: 7 / 3 / 8 / 4; }
+.button-3 { grid-area: 7 / 4 / 8 / 5; }
+.button-multiply { grid-area: 7 / 5 / 8 / 6; }
+.button-0 { grid-area: 8 / 2 / 9 / 3; }
+.button-decimal { grid-area: 8 / 3 / 9 / 4; }
+.button-equal { grid-area: 8 / 4 / 9 / 5; }
+.button-divide { grid-area: 8 / 5 / 9 / 6; }
+.button-delete { grid-area: 6 / 6 / 7 / 7; }
+.button-clear { grid-area: 5 / 6 / 6 / 7; }
