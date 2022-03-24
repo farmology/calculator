@@ -1,5 +1,5 @@
 function add(a, b) {
-    return a + b;
+    return +a + +b;
 }
 
 function subtract(a, b) {
@@ -14,24 +14,65 @@ function divide(a, b) {
     return a / b;
 }
 
-function operate(num1, num2, operand) {
-    switch (operand) {
-        case "+":
-            return add(num1, num2);
-        case "-":
-            return subtract(num1. num2);
+function operate(calculationArray) {
+    switch (calculationArray[1]) {
+        case '+':
+            display.innerText = add(calculationArray[0], calculationArray[2]);
+            break;
+        case '-':
+            display.innerText = subtract(calculationArray[0], calculationArray[2]);
+            break;
         case '*':
-            return multiply(num1, num2);
+            display.innerText = multiply(calculationArray[0], calculationArray[2]);
+            break;
         case '/':
-            return divide(num1, num2);
+            display.innerText = divide(calculationArray[0], calculationArray[2]);
+            break;
     }
+}
+
+const calculationArray = ["", "", ""];
+
+function clearDisplay(){
+    display.innerText = "";
+    calculationArray[0] = "";
+    calculationArray[1] = "";
+    calculationArray[2] = "";
 }
 
 const calculator = document.querySelector(".calculator")
 const display = document.querySelector("#display")
+const clear = document.querySelector("#clear")
+const operator = document.querySelector(".operator")
 
 calculator.addEventListener('click', function(e){
     if (e.target.className === 'number') {
-        display.textContent = e.target.textContent;
+        if (calculationArray[2] === "") {
+            display.innerText += e.target.innerText;
+    }   else {
+            display.innerText = e.target.innerText;
+            calculationArray[0] = calculationArray[2];
+            calculationArray[2] = "";
     }
+}})
+
+
+calculator.addEventListener('click', function(e){
+    if (e.target.className === 'operator') {
+        if (calculationArray[0] === ""){
+            calculationArray[2] = display.innerText;
+            calculationArray[1] = e.target.innerText;
+        } else {
+            calculationArray[2] = display.innerText;
+            operate(calculationArray);
+            calculationArray[2] = display.innerText;
+            calculationArray[1] = e.target.innerText;
+            calculationArray[0] = "";
+   
+        }
+    }
+console.log(calculationArray);
 })
+
+clear.addEventListener('click', clearDisplay)
+
