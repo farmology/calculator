@@ -50,10 +50,12 @@ const clear = document.querySelector("#clear")
 const operator = document.querySelector(".operator")
 
 calculator.addEventListener('click', function(e){
-    if (e.target.className === 'number' && display.innerText.length <= 9) {
+    if (e.target.className === 'number') {
         if (calculationArray[2] === "") {
-            display.innerText += e.target.innerText;
-            display.innerText = +display.innerText;
+            if (display.innerText.length < 10) {
+                display.innerText += e.target.innerText;
+                display.innerText = +display.innerText;
+        }
     }   else {
             display.innerText = e.target.innerText;
             calculationArray[0] = calculationArray[2];
