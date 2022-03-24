@@ -26,8 +26,12 @@ function operate(calculationArray) {
             display.innerText = multiply(calculationArray[0], calculationArray[2]);
             break;
         case '/':
-            display.innerText = divide(calculationArray[0], calculationArray[2]);
+            if (calculationArray[2] === "0" || calculationArray.includes("fuck off")) {
+                display.innerText = "fuck off"
+            } else {
+                display.innerText = divide(calculationArray[0], calculationArray[2]);
             break;
+        } 
     }
 }
 
@@ -46,9 +50,10 @@ const clear = document.querySelector("#clear")
 const operator = document.querySelector(".operator")
 
 calculator.addEventListener('click', function(e){
-    if (e.target.className === 'number') {
+    if (e.target.className === 'number' && display.innerText.length <= 9) {
         if (calculationArray[2] === "") {
             display.innerText += e.target.innerText;
+            display.innerText = +display.innerText;
     }   else {
             display.innerText = e.target.innerText;
             calculationArray[0] = calculationArray[2];
