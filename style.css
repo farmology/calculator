@@ -7,7 +7,6 @@ html {
     height: 100%;
 }
 body {
-    
     height: 100%;
 }
 
@@ -19,45 +18,30 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(9, 1fr);
     gap: 1% 1%;
+    position: relative;
 }
       
-/* .display { grid-area: 2 / 2 / 4 / 7; }
-/* .button-7 { grid-area: 5 / 2 / 6 / 3; }
-/* .button-8 { grid-area: 5 / 3 / 6 / 4; }
-/* .button-9 { grid-area: 5 / 4 / 6 / 5; }
-/* .button-plus { grid-area: 5 / 5 / 6 / 6; }
-/* .button-4 { grid-area: 6 / 2 / 7 / 3; }
-/* .button-5 { grid-area: 6 / 3 / 7 / 4; }
-/* .button-6 { grid-area: 6 / 4 / 7 / 5; }
-/* .button-minus { grid-area: 6 / 5 / 7 / 6; }
-/* .button-1 { grid-area: 7 / 2 / 8 / 3; }
-/* .button-2 { grid-area: 7 / 3 / 8 / 4; }
-/* .button-3 { grid-area: 7 / 4 / 8 / 5; }
-/* .button-multiply { grid-area: 7 / 5 / 8 / 6; }
-/* .button-0 { grid-area: 8 / 2 / 9 / 3; }
-/* .button-decimal { grid-area: 8 / 3 / 9 / 4; }
-/* .button-equal { grid-area: 8 / 4 / 9 / 5; }
-/* .button-divide { grid-area: 8 / 5 / 9 / 6; }
-/* .button-delete { grid-area: 6 / 6 / 7 / 7; }
-/* .button-clear { grid-area: 5 / 6 / 6 / 7; } */
-
-.display { grid-area: 2 / 2 / 4 / 6; }
-.divide { grid-area: 4 / 5 / 5 / 6; }
-.multiply { grid-area: 5 / 5 / 6 / 6; }
-.minus { grid-area: 6 / 5 / 7 / 6; }
-.plus { grid-area: 7 / 5 / 8 / 6; }
-.equal { grid-area: 8 / 5 / 9 / 6; }
-.seven { grid-area: 5 / 2 / 6 / 3; }
-.eight { grid-area: 5 / 3 / 6 / 4; }
-.nine { grid-area: 5 / 4 / 6 / 5; }
-.six { grid-area: 6 / 4 / 7 / 5; }
-.five { grid-area: 6 / 3 / 7 / 4; }
-.four { grid-area: 6 / 2 / 7 / 3; }
-.three { grid-area: 7 / 2 / 8 / 3; }
-.two { grid-area: 7 / 3 / 8 / 4; }
-.one { grid-area: 7 / 4 / 8 / 5; }
-.decimal { grid-area: 8 / 4 / 9 / 5; }
-.zero { grid-area: 8 / 2 / 9 / 4; }
-.clear { grid-area: 4 / 2 / 5 / 3; }
-.delete { grid-area: 4 / 3 / 5 / 4; }
-.extra { grid-area: 4 / 4 / 5 / 5; }
+#display { grid-area: 2 / 2 / 4 / 6;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#divide { grid-area: 4 / 5 / 5 / 6; }
+#multiply { grid-area: 5 / 5 / 6 / 6; }
+#minus { grid-area: 6 / 5 / 7 / 6; }
+#plus { grid-area: 7 / 5 / 8 / 6; }
+#equal { grid-area: 8 / 5 / 9 / 6; }
+#seven { grid-area: 5 / 2 / 6 / 3; }
+#eight { grid-area: 5 / 3 / 6 / 4; }
+#nine { grid-area: 5 / 4 / 6 / 5; }
+#six { grid-area: 6 / 4 / 7 / 5; }
+#five { grid-area: 6 / 3 / 7 / 4; }
+#four { grid-area: 6 / 2 / 7 / 3; }
+#three { grid-area: 7 / 2 / 8 / 3; }
+#two { grid-area: 7 / 3 / 8 / 4; }
+#one { grid-area: 7 / 4 / 8 / 5; }
+#decimal { grid-area: 8 / 4 / 9 / 5; }
+#zero { grid-area: 8 / 2 / 9 / 4; }
+#clear { grid-area: 4 / 2 / 5 / 3; }
+#delete { grid-area: 4 / 3 / 5 / 4; }
+#extra { grid-area: 4 / 4 / 5 / 5; }

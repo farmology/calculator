@@ -27,3 +27,11 @@ function operate(num1, num2, operand) {
     }
 }
 
+const calculator = document.querySelector(".calculator")
+const display = document.querySelector("#display")
+
+calculator.addEventListener('click', function(e){
+    if (e.target.className === 'number') {
+        display.textContent = e.target.textContent;
+    }
+})
